@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Games - Download the Latest Titles</title>
+    <meta name="description"
+        content="Discover the latest and greatest PC games. Download your favorite titles, explore different genres, and join our gaming community.">
+    <meta name="keywords" content="PC games, download games, action games, RPG, adventure games, gaming community">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://pcgames.com.de/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="PC Games - Download the Latest Titles" />
+    <meta property="og:description"
+        content="Discover the latest and greatest PC games. Download your favorite titles, explore different genres, and join our gaming community." />
+    <meta property="og:image" content="https://pcgames.com.de/images/og-image.png" />
+    <meta property="og:url" content="https://pcgames.com.de//" />
+    <meta property="og:type" content="video.game" />
+    <meta property="og:site_name" content="PC Games" />
+    <meta property="og:locale" content="en_US" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "VideoGame",
+          "name": "Cyberpunk 2077",
+          "image": "https://pcgames.com.de/images/games.jpg",
+          "description": "An open-world action-adventure RPG set in the megalopolis of Night City.",
+          "genre": "Action RPG",
+          "url": "https://pcgames.com.de/cyberpunk-2077",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "1000"
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <!-- <h1>Welcome to PC Games</h1>
+    <h2>Popular Games</h2> -->
+    <nav class="navbar">
+        <div class="left-section">
+            <div class="logo">
+                <h1>PC Games</h1>
+            </div>
+        </div>
+        <div class="center-section">
+            <div class="search-container">
+                <input type="text" placeholder="Search games...">
+                <button type="button" class="search-btn">
+                    <i class="fas fa-search"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="register-btn">Register</button>
+            </div>
+        </div>
+    </nav>
+    <div class="sub-nav">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="new-game.html">NEW GAMES</a>
+            <a href="top-games.html">TOP GAMES</a>
+        </div>
+        <div class="right-controls">
+            <button class="bookmark-btn" onclick="showBookmarks()">
+                <i class="fas fa-bookmark"></i>
+                Bookmarks
+            </button>
+            <div class="language-selector">
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="genre-section">
+                <h2>Genre</h2>
+                <ul class="genre-list">
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('action')">
+                            <i class="fas fa-gamepad"></i>
+                            Action Games
+                            <span class="game-count">(125)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('adventure')">
+                            <i class="fas fa-mountain"></i>
+                            Adventure
+                            <span class="game-count">(98)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('fps')">
+                            <i class="fas fa-tachometer-alt"></i>
+                            FPS
+                            <span class="game-count">(10)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('rpg')">
+                            <i class="fas fa-dragon"></i>
+                            RPG
+                            <span class="game-count">(78)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('strategy')">
+                            <i class="fas fa-chess"></i>
+                            Strategy
+                            <span class="game-count">(56)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('sports')">
+                            <i class="fas fa-football-ball"></i>
+                            Sports
+                            <span class="game-count">(45)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('shooter')">
+                            <i class="fas fa-gun"></i>
+                            Shooter
+                            <span class="game-count">(15)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('racing')">
+                            <i class="fas fa-car-side"></i>
+                            Racing
+                            <span class="game-count">(34)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('survival')">
+                            <i class="fas fa-campground"></i>
+                            Survival
+                            <span class="game-count">(20)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('simulation')">
+                            <i class="fas fa-plane"></i>
+                            Simulation
+                            <span class="game-count">(67)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="filterGamesByGenre('horror')">
+                            <i class="fas fa-ghost"></i>
+                            Horror
+                            <span class="game-count">(23)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <main class="main-content">
+            <div class="games-header">
+                <h2>Popular Games</h2>
+                <div class="games-filter">
+                    <select>
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="images/slider.png" alt="Assassin's Creed Valhalla - Download Now">
+                        <div class="slide-content">
+                            <h2>Assassin's Creed Valhalla</h2>
+                            <p>Become a legendary Viking warrior raised on tales of battle and glory.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider1.jpg" alt="Call of Duty: Modern Warfare">
+                        <div class="slide-content">
+                            <h2>Call of Duty: Modern Warfare</h2>
+                            <p>Experience the ultimate online multiplayer battlefield.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/slider2.jpg" alt="FIFA 24">
+                        <div class="slide-content">
+                            <h2>FIFA 24</h2>
+                            <p>The world's most popular football game returns.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="games-grid">
+                <!-- Game Card 1 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games.jpg" alt="Cyberpunk 2077">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://ipcgames.com/wait-for-game-download/" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (65.4 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/cyberpunk-2077/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (65.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="game-description">An open-world action-adventure RPG set in the megalopolis of Night
+                            City.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card" data-genre="action adventure">
+                    <div class="game-image">
+                        <img src="images/games1.jpg" alt="Red Dead Redemption 2">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://oceansofgamess.com/getsoft.php" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (112 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/red-dead-redemption-2/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (112 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Red Dead Redemption 2</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">An epic tale of life in America's unforgiving heartland.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games2.jpg" alt="Elden Ring">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="games/eldenring.zip" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (49 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/elden-ring/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (49 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="game-description">An action RPG set in a vast fantasy world filled with danger and
+                            discovery.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="game-card" data-genre="action adventure">
+                    <div class="game-image">
+                        <img src="images/games3.png" alt="God of War">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://ipcgames.com/wait-for-game-download/" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (70 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/god-of-war-ragnarok/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (70 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>God of War</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Journey through Norse realms in this epic adventure of gods and
+                            monsters.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 5 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games4.png" alt="Resident Evil 2">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkagames.com/2019/05/resident-evil-2-remake-game-d27.html"
+                                        class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (21.2 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-2-deluxe-edition/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (21.2 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 2 Remake</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 6 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games6.jpg" alt="Resident Evil 3">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/10020327708" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (23.2 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-3/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (23.2 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 3 Remake</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 7 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games7.jpeg" alt="Resident Evil 4">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/07260017197" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (3.9 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-4-hd-project/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (13.2 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 4 Remake</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 8 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games8.jpeg" alt="Resident Evil 5">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/06013816553" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (6.9 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-5-gold-edition/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (8.3 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 5 </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 9 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games9.jpg" alt="Resident Evil 6">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/06082016635" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (5.21 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-6/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (15.8 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 6 </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 10 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games10.jpeg" alt="Resident Evil 7">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/06121316727" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (20.4 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-7-biohazard/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (21.1 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 7 Biohazard</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 11 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games11.jpeg" alt="Resident Evil 8">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/09103232365" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (26.5 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/resident-evil-village/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (19.5 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Resident Evil 8 Village </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Survive the zombie apocalypse in this stunning remake of the
+                            survival horror classic.</p>
+                    </div>
+                </div>
+
+
+                <!-- Game Card 12 -->
+                <div class="game-card" data-genre="action shooter">
+                    <div class="game-image">
+                        <img src="images/games5.jpg" alt="Sniper Elite 4">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://ipcgames.com/wait-for-game-download/" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (85.4 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/sniper-elite-4-deluxe-edition/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (85.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Sniper Elite 4</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Shooter</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Experience tactical third-person combat in this award-winning
+                            stealth shooter.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 13 -->
+                <div class="game-card" data-genre="action shooter">
+                    <div class="game-image">
+                        <img src="images/games12.jpg" alt="Sniper Elite 5">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="#" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (85.4 GB)
+                                    </a>
+                                    <a href="#" class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (85.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Sniper Elite 5 Comming Soon!</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Shooter</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Experience tactical third-person combat in this award-winning
+                            stealth shooter.</p>
+                    </div>
+                </div>
+                <!-- Game Card 14 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games13.jpeg" alt="Dragon's Dogma 2">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="#" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (67.4 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/dragons-dogma-2/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (38.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Dragon's Dogma 2</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A fantasy open-world RPG by Capcom, featuring expanded gameplay and
+                            storytelling.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 15 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games14.jpeg" alt="Silent Hill 2 Remake">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/11191637971" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (33.2 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/silent-hill-2-remake/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (25.6 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Silent Hill 2 Remake</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A reimagining of the classic horror game, blending modern visuals
+                            with its eerie atmosphere.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 16 -->
+                <div class="game-card" data-genre="action fps">
+                    <div class="game-image">
+                        <img src="images/games15.jpeg" alt="Wrath: Aeon of Ruin">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/11303024998" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (397 MB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/wrath-aeon-of-ruin/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (915 MB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Wrath: Aeon of Ruin</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action FPS</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A retro-inspired FPS with Quake-like gameplay.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 17 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games16.jpeg" alt="The Thaumaturge">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/07235737323" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (23.4 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/the-thaumaturge/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (13 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>The Thaumaturge</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A turn-based RPG set in 1905 Warsaw with occult themes.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 18 -->
+                <div class="game-card" data-genre="action simulation">
+                    <div class="game-image">
+                        <img src="images/games17.jpeg" alt="Lightyear Frontier">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/05191536919" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (1.89 GB)
+                                    </a>
+                                    <a href="https://repack.info/en/267-lightyear-frontier-repack.html"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (1.84 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Lightyear Frontier</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Farming Simulation</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A peaceful farming simulator with a mech-based twist.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 19 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games18.jpg" alt="South Park: Snow Day">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://freegogpcgames.com/29500/7-south-park-snow-day/"
+                                        class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (27.3 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/south-park-snow-day/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (16.5 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>South Park: Snow Day</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A new comedic RPG set in the South Park universe.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 20 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games19.jpeg" alt="Pepper Grinde">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/07015037190" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (1.22 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/pepper-grinder/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (352 MB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Pepper Grinder</h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A 2D platformer focused on exploration using a drill mechanic.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 21 -->
+                <div class="game-card" data-genre="action adventure">
+                    <div class="game-image">
+                        <img src="images/games20.jpg" alt="Neva">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://gamdie.com/neva/" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (6.52 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/neva/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (5.3 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Neva </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A stunning 2D adventure game exploring themes of loss and motherhood
+                            in a visually striking world.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 22 -->
+                <div class="game-card" data-genre="action strategy">
+                    <div class="game-image">
+                        <img src="images/games21.jpg" alt="Ara: History Untold">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.freegamesdl.net/ara-history-untold-pc-free-downloads/"
+                                        class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (5.21 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/ara-history-untold/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (14.45 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Ara: History Untold </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Strategy</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A grand strategy game focusing on prestige-based achievements rather
+                            than traditional victory conditions.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 23 -->
+                <div class="game-card" data-genre="action survival horror">
+                    <div class="game-image">
+                        <img src="images/games22.jpeg" alt="Alan Wake 2">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/11171729770" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (74.5 GB)
+                                    </a>
+                                    <a href="magnet:?xt=urn:btih:F8C65A805CD8098A28190586AD4ACF0329144788&amp;dn=Alan+Wake+2%3A+Deluxe+Edition+%28v1.2.2+%2B+4+DLCs+%2B+Bonus+Soundtrack%2C+MULTi14%29+%5BFitGirl+Repack%2C+Selective+Download+-+from+74.5+GB%5D&amp;tr=udp%3A%2F%2Fopentor.net%3A6969&amp;tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.ccp.ovh%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&amp;tr=https%3A%2F%2Ftracker.tamersunion.org%3A443%2Fannounce&amp;tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&amp;tr=http%3A%2F%2Ftracker.bt4g.com%3A2095%2Fannounce&amp;tr=udp%3A%2F%2Fbt2.archive.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fbt1.archive.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.filemail.com%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker1.bt.moack.co.kr%3A80%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&amp;tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&amp;tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (38.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Alan Wake 2 </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Survival Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A terrifying return to the survival horror genre, with thrilling
+                            gameplay and an eerie atmosphere that pushes the limits of psychological horror.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 24 -->
+                <div class="game-card" data-genre="action horror">
+                    <div class="game-image">
+                        <img src="images/games13.jpeg" alt="Dragon's Dogma 2">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="#" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (33.2 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/dragons-dogma-2/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (25.6 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Dragon's Dogma 2 </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Horror</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description"> A highly anticipated sequel featuring a vast open world and the
+                            unique Pawn system, where players can recruit allies with unique abilities​.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 25 -->
+                <div class="game-card" data-genre="action rpg">
+                    <div class="game-image">
+                        <img src="images/games23.jpeg" alt="Metaphor: ReFantazio">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="#" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (397 MB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/metaphor-refantazio/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (21.4 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Metaphor: ReFantazio </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action RPG</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="game-description">An exciting new RPG from Atlus, blending deep storylines and
+                            turn-based combat similar to the Persona series.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 26 -->
+                <div class="game-card" data-genre="action survival">
+                    <div class="game-image">
+                        <img src="images/games24.jpg" alt="Pacific Drive">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/030813365013" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (17 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/pacific-drive/" class="download-btn torrent"
+                                        target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (9.5 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Pacific Drive </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Survival</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A survival game set in a storm-wrecked world where you drive through
+                            a dangerous, altered landscape filled with mysterious phenomena​.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 27 -->
+                <div class="game-card" data-genre="action adventure">
+                    <div class="game-image">
+                        <img src="images/games25.jpeg" alt="Palworld">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="#" class="download-btn" target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (1.89 GB)
+                                    </a>
+                                    <a href="#" class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (1.84 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Palworld Comming Soon! </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Adventure</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.4</span>
+                            </div>
+                        </div>
+                        <p class="game-description">A quirky and twisted adventure game where you collect and use "Pals"
+                            (which you can also exploit in dark ways)​.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 28 -->
+                <div class="game-card" data-genre="action survival">
+                    <div class="game-image">
+                        <img src="images/games26.jpeg" alt="Enshrouded">
+                        <div class="game-overlay">
+                            <div class="game-buttons">
+                                <div class="download-options">
+                                    <a href="https://www.apunkasoftware.net/vlink/11190238024" class="download-btn"
+                                        target="_blank">
+                                        <i class="fas fa-download"></i>
+                                        Direct (15.8 GB)
+                                    </a>
+                                    <a href="https://fitgirl-repacks.site/south-park-snow-day/"
+                                        class="download-btn torrent" target="_blank">
+                                        <i class="fas fa-magnet"></i>
+                                        Magnet (10.5 GB)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Enshrouded </h3>
+                        <div class="game-meta">
+                            <span class="game-genre">Action Survival</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="game-description">Set in a world ravaged by a corrupting fog, players must fight for
+                            survival and uncover the truth behind the catastrophe.</p>
+                    </div>
+                </div>
+
+                <!-- Game Card 29 -->
+                <!-- <div class="game-card" data-genre="action horror">
+                                <div class="game-image">
+                                    <img src="images/games19.jpeg" alt="Pepper Grinde">
+                                    <div class="game-overlay">
+                                        <div class="game-buttons">
+                                            <div class="download-options">
+                                                <a href="https://www.apunkasoftware.net/vlink/07015037190" class="download-btn"
+                                                    target="_blank">
+                                                    <i class="fas fa-download"></i>
+                                                    Direct (1.22 GB)
+                                                </a>
+                                                <a href="https://fitgirl-repacks.site/pepper-grinder/" class="download-btn torrent"
+                                                    target="_blank">
+                                                    <i class="fas fa-magnet"></i>
+                                                    Magnet (352 MB)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <h3>Pepper Grinder</h3>
+                                    <div class="game-meta">
+                                        <span class="game-genre">Action Horror</span>
+                                        <div class="game-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.8</span>
+                                        </div>
+                                    </div>
+                                    <p class="game-description">A 2D platformer focused on exploration using a drill mechanic.</p>
+                                </div>
+                            </div> -->
+
+                <!-- Game Card 30 -->
+                <!-- <div class="game-card" data-genre="action adventure">
+                                <div class="game-image">
+                                    <img src="images/games20.jpg" alt="Neva">
+                                    <div class="game-overlay">
+                                        <div class="game-buttons">
+                                            <div class="download-options">
+                                                <a href="https://gamdie.com/neva/" class="download-btn" target="_blank">
+                                                    <i class="fas fa-download"></i>
+                                                    Direct (6.52 GB)
+                                                </a>
+                                                <a href="https://fitgirl-repacks.site/neva/" class="download-btn torrent"
+                                                    target="_blank">
+                                                    <i class="fas fa-magnet"></i>
+                                                    Magnet (5.3 GB)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <h3>Neva </h3>
+                                    <div class="game-meta">
+                                        <span class="game-genre">Action Adventure</span>
+                                        <div class="game-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.8</span>
+                                        </div>
+                                    </div>
+                                    <p class="game-description">A stunning 2D adventure game exploring themes of loss and motherhood
+                                        in a visually striking world.</p>
+                                </div>
+                            </div> -->
+
+                <!-- Game Card 31 -->
+                <!-- <div class="game-card" data-genre="action strategy">
+                                <div class="game-image">
+                                    <img src="images/games21.jpg" alt="Ara: History Untold">
+                                    <div class="game-overlay">
+                                        <div class="game-buttons">
+                                            <div class="download-options">
+                                                <a href="https://www.freegamesdl.net/ara-history-untold-pc-free-downloads/"
+                                                    class="download-btn" target="_blank">
+                                                    <i class="fas fa-download"></i>
+                                                    Direct (5.21 GB)
+                                                </a>
+                                                <a href="https://fitgirl-repacks.site/ara-history-untold/"
+                                                    class="download-btn torrent" target="_blank">
+                                                    <i class="fas fa-magnet"></i>
+                                                    Magnet (14.45 GB)
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="game-info">
+                                    <h3>Ara: History Untold </h3>
+                                    <div class="game-meta">
+                                        <span class="game-genre">Action Strategy</span>
+                                        <div class="game-rating">
+                                            <i class="fas fa-star"></i>
+                                            <span>4.8</span>
+                                        </div>
+                                    </div>
+                                    <p class="game-description">A grand strategy game focusing on prestige-based achievements rather
+                                        than traditional victory conditions.</p>
+                                </div>
+                            </div> -->
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <a href="https://api.whatsapp.com/send?phone=918392877813">
+            <img src="images/whatsapp2.png" alt="WhatsApp Icon" class="whatsapp-icon">
+        </a>
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your ultimate destination for PC gaming news, reviews, and downloads. Join our community of gamers
+                    today!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="new-game.html">New Games</a></li>
+                    <li><a href="top-games.html">Top Games</a></li>
+                    <!-- <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li> -->
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Action Games</a></li>
+                    <li><a href="#">Adventure Games</a></li>
+                    <li><a href="#">Racing Games</a></li>
+                    <li><a href="#">Sports Games</a></li>
+                    <li><a href="#">Strategy Games</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get latest updates and news.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 PC Games. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/ashu.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
