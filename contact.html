@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - PC Games</title>
+    <meta name="description"
+        content="Contact PC Games for questions, suggestions, or feedback. Reach out to our team for support and inquiries.">
+    <meta name="keywords" content="PC Games, Contact, Support, Feedback, Gaming">
+    <meta name="author" content="PC Games Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.com/contact.html">
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Contact Us - PC Games">
+    <meta property="og:description"
+        content="Contact PC Games for questions, suggestions, or feedback. Reach out to our team for support and inquiries.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/contact.html">
+    <meta property="og:site_name" content="PC Games">
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact Us - PC Games">
+    <meta name="twitter:description"
+        content="Contact PC Games for questions, suggestions, or feedback. Reach out to our team for support and inquiries.">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,31 +51,108 @@
             </div>
         </div>
     </nav>
+    <div class="sub-nav">
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="new-game.html">NEW GAMES</a>
+            <a href="top-games.html">TOP GAMES</a>
+            <a href="contact.html">CONTACT US</a>
+        </div>
+        <div class="right-controls">
+            <button class="bookmark-btn" onclick="showBookmarks()">
+                <i class="fas fa-bookmark"></i>
+                Bookmarks
+            </button>
+            <div class="language-selector">
+                <select id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
     <main class="main-content">
         <h2>Contact Us</h2>
         <p>If you have any questions, suggestions, or feedback, please fill out the form below:</p>
-        <form action="#" method="post">
+        <form action="contact_process.php" method="post" aria-label="Contact form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
     </main>
 
     <footer class="footer">
+        <a href="https://api.whatsapp.com/send?phone=91A turn-based strategy game that allows you to build and grow an
+                            empire throughout history8392877813">
+            <img src="images/whatsapp2.png" alt="WhatsApp Icon" class="whatsapp-icon">
+        </a>
         <div class="footer-content">
-            <h3>About Us</h3>
-            <p>Learn more about our mission and vision.</p>
+
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your ultimate destination for PC gaming news, reviews, and downloads. Join our community of gamers
+                    today!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="new-game.html">New Games</a></li>
+                    <li><a href="top-games.html">Top Games</a></li>
+                    <!-- <li><a href="about.html">About Us</a></li> -->
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Action Games</a></li>
+                    <li><a href="#">Adventure Games</a></li>
+                    <li><a href="#">Racing Games</a></li>
+                    <li><a href="#">Sports Games</a></li>
+                    <li><a href="#">Strategy Games</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get latest updates and news.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
             <p>&copy; 2024 PC Games. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
         </div>
     </footer>
+    <script src="js/ashu.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
