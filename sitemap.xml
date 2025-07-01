@@ -1,22 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Main Pages -->
     <url>
         <loc>https://pcgames.com.de/</loc>
-        <lastmod>2024-03-21</lastmod>
+        <lastmod>2025-07-01</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://pcgames.com.de/"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/og-image.png</image:loc>
+            <image:title>PC Games - Download Latest PC Games</image:title>
+            <image:caption>Download the latest PC games including action, RPG, adventure, and more.</image:caption>
+        </image:image>
     </url>
+    
     <url>
         <loc>https://pcgames.com.de/new-game.html</loc>
-        <lastmod>2024-03-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/new-game.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/neue-spiele.html"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/new-games.jpg</image:loc>
+            <image:title>New PC Games 2025</image:title>
+            <image:caption>Latest PC game releases for 2025</image:caption>
+        </image:image>
     </url>
+    
     <url>
-        <loc>https://pcgames.com.de//top-games.html</loc>
+        <loc>https://pcgames.com.de/top-games.html</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/top-games.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/beste-spiele.html"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/top-games.jpg</image:loc>
+            <image:title>Top PC Games 2025</image:title>
+            <image:caption>Best PC games of 2025</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/contact.html</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/contact.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/kontakt.html"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/contact.jpg</image:loc>
+            <image:title>Contact PC Games</image:title>
+            <image:caption>Contact information and support</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Game Pages -->
+    <url>
+        <loc>https://pcgames.com.de/cyberpunk-2077</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/cyberpunk-2077"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/cyberpunk-2077"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games.jpg</image:loc>
+            <image:title>Cyberpunk 2077</image:title>
+            <image:caption>Action RPG set in Night City</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/red-dead-redemption-2</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/red-dead-redemption-2"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/red-dead-redemption-2"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games1.jpg</image:loc>
+            <image:title>Red Dead Redemption 2</image:title>
+            <image:caption>Western adventure game</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/elden-ring</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/elden-ring"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/elden-ring"/>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games2.jpg</image:loc>
+            <image:title>Elden Ring</image:title>
+            <image:caption>Fantasy action RPG</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Genre Pages -->
+    <url>
+        <loc>https://pcgames.com.de/genre/action</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/genre/action"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/genre/action"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/genre/rpg</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/genre/rpg"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/genre/rpg"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/genre/adventure</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/genre/adventure"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/genre/adventure"/>
+    </url>
+    
+    <!-- Additional static pages -->
+    <url>
+        <loc>https://pcgames.com.de/about</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/about"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/about"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/privacy-policy</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/privacy-policy"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/privacy-policy"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/terms-of-service</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/terms-of-service"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/terms-of-service"/>
+    </url>
+    
+    <!-- Blog/News Section -->
+    <url>
+        <loc>https://pcgames.com.de/blog</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/blog"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/blog"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/blog/pc-gaming-trends-2025</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/blog/pc-gaming-trends-2025"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/blog/pc-gaming-trends-2025"/>
+    </url>
+    
+    <!-- Help & Support -->
+    <url>
+        <loc>https://pcgames.com.de/faq</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/faq"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/faq"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/support</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/support"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://pcgames.com.de/de/support"/>
+    </url>
+</urlset>
+    
+    <!-- Game Pages -->
+    <url>
+        <loc>https://pcgames.com.de/cyberpunk-2077</loc>
         <lastmod>2024-03-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games.jpg</image:loc>
+            <image:title>Cyberpunk 2077 - Download PC Game</image:title>
+            <image:caption>Cyberpunk 2077 is an open-world, action-adventure RPG set in Night City</image:caption>
+            <image:license>https://www.cdprojekt.com/</image:license>
+        </image:image>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/cyberpunk-2077"/>
     </url>
-    <!-- Add more URLs as needed -->
+    
+    <url>
+        <loc>https://pcgames.com.de/red-dead-redemption-2</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games1.jpg</image:loc>
+            <image:title>Red Dead Redemption 2 - Download PC Game</image:title>
+        </image:image>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/red-dead-redemption-2"/>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/elden-ring</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://pcgames.com.de/images/games2.jpg</image:loc>
+            <image:title>Elden Ring - Download PC Game</image:title>
+        </image:image>
+        <xhtml:link rel="alternate" hreflang="en" href="https://pcgames.com.de/elden-ring"/>
+    </url>
+    
+    <!-- Genre Pages -->
+    <url>
+        <loc>https://pcgames.com.de/genre/action</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/genre/rpg</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/genre/adventure</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Additional static pages -->
+    <url>
+        <loc>https://pcgames.com.de/about</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/privacy-policy</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/terms-of-service</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Blog/News Section -->
+    <url>
+        <loc>https://pcgames.com.de/blog</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/blog/pc-gaming-trends-2025</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Help & Support -->
+    <url>
+        <loc>https://pcgames.com.de/faq</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://pcgames.com.de/support</loc>
+        <lastmod>2024-03-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>

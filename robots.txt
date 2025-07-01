@@ -1,5 +1,81 @@
 User-agent: *
-Disallow: /private/
 Allow: /
 
+# Crawl-delay for different bots
+Crawl-delay: 10
+
+# Allow important directories
+Allow: /games/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /tmp/
+Disallow: /cache/
+
+# Disallow query strings for tracking and sessions
+Disallow: /*?*
+Allow: /*?sitemap*
+
+# Allow all media files
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Allow specific file types for bots
+Allow: /*.pdf$
+Allow: /*.doc$
+Allow: /*.docx$
+Allow: /*.xls$
+Allow: /*.xlsx$
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+
+User-agent: Bingbot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Sitemap location
 Sitemap: https://pcgames.com.de/sitemap.xml
+
+# Host directive for search engines
+Host: pcgames.com.de
+
+# Preferred domain
+Canonical: https://pcgames.com.de/
+
+# Rate limiting
+Crawl-delay: 10
+
+# Clean parameters
+Allow: /search
+Disallow: /search?*
+
+# Allow Googlebot to access all sections
+User-agent: Googlebot
+Allow: /
