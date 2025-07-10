@@ -1,59 +1,48 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = htmlspecialchars(trim($_POST['name']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $message = htmlspecialchars(trim($_POST['message']));
+header('Content-Type: application/json');
 
-    // Validate fields
-    if (!$name || !$email || !$message) {
-        $error = 'Please fill in all fields.';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error = 'Invalid email format.';
-    } else {
-        // Set your email address here
-        $to = 'your@email.com'; // <-- CHANGE THIS TO YOUR EMAIL
-        $subject = 'New Contact Form Submission - PC Games';
-        $body = "Name: $name\nEmail: $email\nMessage:\n$message";
-        $headers = "From: $email\r\nReply-To: $email";
+// DB config
+$host = 'localhost';
+$db   = 'pcgamesdb'; // apne DB ka naam
+$user = 'root';    // apne DB user
+$pass = '';        // apne DB password
 
-        if (mail($to, $subject, $body, $headers)) {
-            $success = 'Thank you for contacting us! We will get back to you soon.';
-        } else {
-            $error = 'Sorry, there was an error sending your message. Please try again later.';
-        }
-    }
+// 1. Validate
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
+
+if(!$name || !$email || !$subject || !$message){
+    echo json_encode(['success'=>false, 'error'=>'All fields are required.']);
+    exit;
 }
+
+// 2. Store in DB
+$conn = new mysqli($host, $user, $pass, $db);
+if($conn->connect_error){
+    echo json_encode(['success'=>false, 'error'=>'Database connection failed: ' . $conn->connect_error]);
+    exit;
+}
+$stmt = $conn->prepare("INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
+if (!$stmt) {
+    echo json_encode(['success'=>false, 'error'=>'Prepare failed: ' . $conn->error]);
+    exit;
+}
+$stmt->bind_param("ssss", $name, $email, $subject, $message);
+if (!$stmt->execute()) {
+    echo json_encode(['success'=>false, 'error'=>'Execute failed: ' . $stmt->error]);
+    exit;
+}
+$stmt->close();
+$conn->close();
+
+// 3. Send Email
+$to = "info@pcgames.com.de"; // apna email
+$headers = "From: $email\r\nReply-To: $email\r\n";
+$body = "Name: $name\nEmail: $email\nSubject: $subject\nMessage:\n$message";
+@mail($to, "New Contact Form Submission: $subject", $body, $headers);
+
+// 4. Success response
+echo json_encode(['success'=>true]);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - PC Games</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <main class="main-content">
-        <h2>Contact Us</h2>
-        <?php if (!empty($error)): ?>
-            <div style="color:red;"> <?php echo $error; ?> </div>
-        <?php endif; ?>
-        <?php if (!empty($success)): ?>
-            <div style="color:green;"> <?php echo $success; ?> </div>
-        <?php endif; ?>
-        <form action="contact_process.php" method="post" aria-label="Contact form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" value="<?php echo isset($name) ? htmlspecialchars($name) : ''; ?>">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required aria-required="true"><?php echo isset($message) ? htmlspecialchars($message) : ''; ?></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-        <p><a href="contact.html">Back to Contact Page</a></p>
-    </main>
-</body>
-</html>

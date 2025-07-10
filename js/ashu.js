@@ -131,31 +131,34 @@ function searchGames() {
 document.addEventListener('DOMContentLoaded', function() {
     // Add click handler for "All Games"
     const gamesHeader = document.querySelector('.games-header h2');
-    gamesHeader.style.cursor = 'pointer';
-    gamesHeader.addEventListener('click', showAllGames);
+    if (gamesHeader) {
+        gamesHeader.style.cursor = 'pointer';
+        gamesHeader.addEventListener('click', showAllGames);
+    }
 
     // Add search button click handler
     const searchBtn = document.querySelector('.search-btn');
-    searchBtn.addEventListener('click', searchGames);
+    if (searchBtn) searchBtn.addEventListener('click', searchGames);
 
     // Add search input enter key handler
     const searchInput = document.querySelector('.search-container input');
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            searchGames();
-        }
-    });
-
-    // Add search input clear handler
-    searchInput.addEventListener('input', function(e) {
-        if (e.target.value === '') {
-            showAllGames();
-        }
-    });
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchGames();
+            }
+        });
+        // Add search input clear handler
+        searchInput.addEventListener('input', function(e) {
+            if (e.target.value === '') {
+                showAllGames();
+            }
+        });
+    }
 });
 
 // Initialize slider variables
-let currentSlide = 0;
+let ashuCurrentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
@@ -172,14 +175,14 @@ function showSlide(index) {
 
 // Function to go to the next slide
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first slide
-    showSlide(currentSlide);
+    ashuCurrentSlide = (ashuCurrentSlide + 1) % totalSlides; // Loop back to the first slide
+    showSlide(ashuCurrentSlide);
 }
 
 // Function to go to the previous slide
 function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Loop back to the last slide
-    showSlide(currentSlide);
+    ashuCurrentSlide = (ashuCurrentSlide - 1 + totalSlides) % totalSlides; // Loop back to the last slide
+    showSlide(ashuCurrentSlide);
 }
 
 // Function to update dots
@@ -194,11 +197,13 @@ function updateDots(index) {
 }
 
 // Event listeners for slider buttons
-document.querySelector('.next').addEventListener('click', nextSlide);
-document.querySelector('.prev').addEventListener('click', prevSlide);
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
 // Auto slide every 5 seconds
 setInterval(nextSlide, 5000);
 
 // Show the first slide initially
-showSlide(currentSlide);
+showSlide(ashuCurrentSlide);
