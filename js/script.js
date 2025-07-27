@@ -305,6 +305,39 @@ function stopSlider() {
     clearInterval(slideInterval);
 }
 
+// ====================
+// Highlight active navigation link based on current page
+// ====================
+
+document.addEventListener('DOMContentLoaded', function () {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function setActive(linkToActivate) {
+        navLinks.forEach(l => {
+            l.classList.remove('active');
+            l.removeAttribute('aria-current');
+        });
+        linkToActivate.classList.add('active');
+        linkToActivate.setAttribute('aria-current', 'page');
+    }
+
+    navLinks.forEach(link => {
+        // Update active link on click immediately
+        link.addEventListener('click', () => setActive(link));
+        const linkPage = link.getAttribute('href');
+
+        // Remove any hard-coded active classes first
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+
+        // Add active state if this link points to the current page
+        if (linkPage === currentPage || (linkPage === 'index.html' && (currentPage === '' || currentPage === 'index.html'))) {
+            setActive(link);
+        }
+    });
+});
+
 // Initialize slider if slides exist
 if (slides.length > 0) {
     showSlide(0);
